@@ -1,0 +1,431 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000006ee7e976, pid=3420, tid=0x0000000000000edc
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_301-b09) (build 1.8.0_301-b09)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.301-b09 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x22e976]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001ad89b25800):  GCTaskThread [stack: 0x0000000628800000,0x0000000628900000] [id=3804]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000000000008
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00000006288fe5b0, RCX=0x0000000000000000, RDX=0x0000000000000028
+RSP=0x00000006288fe2e0, RBP=0x00000006288feb10, RSI=0x0000000000000000, RDI=0x00000006288fec80
+R8 =0x0000000000000000, R9 =0x000001ada425b1e8, R10=0x000001ad89b229d0, R11=0x000001ada425b9cd
+R12=0x0000000000000107, R13=0x000001ad89b25f50, R14=0x00000000000000b8, R15=0x000000006ec50000
+RIP=0x000000006ee7e976, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x00000006288fe2e0)
+0x00000006288fe2e0:   0000000000000000 0000000000000000
+0x00000006288fe2f0:   0000000000000000 0000000000000000
+0x00000006288fe300:   0000000000000000 0000000000000000
+0x00000006288fe310:   0000000000000000 0000000000000000
+0x00000006288fe320:   0000000000000000 0000000000000000
+0x00000006288fe330:   0000000000000000 0000000000000000
+0x00000006288fe340:   0000000000000000 0000000000000000
+0x00000006288fe350:   0000000000000000 0000000000000000
+0x00000006288fe360:   0000000000000000 0000000000000000
+0x00000006288fe370:   0000000000000000 0000000000000000
+0x00000006288fe380:   0000000000000000 0000000000000000
+0x00000006288fe390:   0000000000000000 0000000000000000
+0x00000006288fe3a0:   0000000000000000 0000000000000000
+0x00000006288fe3b0:   0000000000000000 0000000000000000
+0x00000006288fe3c0:   0000000000000000 0000000000000000
+0x00000006288fe3d0:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x000000006ee7e976)
+0x000000006ee7e956:   01 00 00 48 8b 05 48 a8 56 00 48 33 c4 48 89 84
+0x000000006ee7e966:   24 30 01 00 00 48 8b d9 48 63 49 10 48 8b 43 08
+0x000000006ee7e976:   38 54 08 08 74 33 44 0f be c2 48 8d 4c 24 20 48
+0x000000006ee7e986:   8d 15 e4 7b 3b 00 e8 9f c9 df ff ba 36 00 00 00 
+
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00000006288fe5b0 is an unknown value
+RCX=0x0000000000000000 is an unknown value
+RDX=0x0000000000000028 is an unknown value
+RSP=0x00000006288fe2e0 is an unknown value
+RBP=0x00000006288feb10 is an unknown value
+RSI=0x0000000000000000 is an unknown value
+RDI=0x00000006288fec80 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x000001ada425b1e8 is pointing into metadata
+R10=0x000001ad89b229d0 is an unknown value
+R11=0x000001ada425b9cd is pointing into metadata
+R12=0x0000000000000107 is an unknown value
+R13=0x000001ad89b25f50 is an unknown value
+R14=0x00000000000000b8 is an unknown value
+R15=0x000000006ec50000 is an unknown value
+
+
+Stack: [0x0000000628800000,0x0000000628900000],  sp=0x00000006288fe2e0,  free space=1016k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x22e976]
+V  [jvm.dll+0x22f094]
+V  [jvm.dll+0x106b73]
+V  [jvm.dll+0x108af9]
+V  [jvm.dll+0x10933e]
+V  [jvm.dll+0x1069aa]
+V  [jvm.dll+0x105b3a]
+V  [jvm.dll+0xcd46b]
+V  [jvm.dll+0xcdf03]
+V  [jvm.dll+0x112944]
+V  [jvm.dll+0x135c40]
+V  [jvm.dll+0x205d19]
+V  [jvm.dll+0x20562b]
+V  [jvm.dll+0x23c16f]
+V  [jvm.dll+0x3d6aca]
+V  [jvm.dll+0x3c5219]
+V  [jvm.dll+0x2923dc]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+JavaThread 0x000001ad89b0b000 (nid = 7116) was being processed
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  ua.com.foxminded.task6.RaceResultServiceTest.testResultRace()V+199
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.junit.platform.commons.util.ReflectionUtils.invokeMethod(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+41
+j  org.junit.jupiter.engine.execution.MethodInvocation.proceed()Ljava/lang/Object;+16
+j  org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed()Ljava/lang/Object;+8
+j  org.junit.jupiter.engine.extension.TimeoutExtension.intercept(Lorg/junit/jupiter/api/extension/InvocationInterceptor$Invocation;Lorg/junit/jupiter/api/extension/ReflectiveInvocationContext;Lorg/junit/jupiter/api/extension/ExtensionContext;Lorg/junit/jupiter/engine/extension/TimeoutDuration;Lorg/junit/jupiter/engine/extension/TimeoutExtension$TimeoutProvider;)Ljava/lang/Object;+28
+j  org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(Lorg/junit/jupiter/api/extension/InvocationInterceptor$Invocation;Lorg/junit/jupiter/api/extension/ReflectiveInvocationContext;Lorg/junit/jupiter/api/extension/ExtensionContext;Lorg/junit/jupiter/engine/extension/TimeoutExtension$TimeoutProvider;)Ljava/lang/Object;+31
+j  org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(Lorg/junit/jupiter/api/extension/InvocationInterceptor$Invocation;Lorg/junit/jupiter/api/extension/ReflectiveInvocationContext;Lorg/junit/jupiter/api/extension/ExtensionContext;)V+9
+j  org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor$$Lambda$109.apply(Lorg/junit/jupiter/api/extension/InvocationInterceptor;Lorg/junit/jupiter/api/extension/InvocationInterceptor$Invocation;Lorg/junit/jupiter/api/extension/ReflectiveInvocationContext;Lorg/junit/jupiter/api/extension/ExtensionContext;)V+5
+j  org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(Lorg/junit/jupiter/engine/execution/ExecutableInvoker$ReflectiveInterceptorCall$VoidMethodInterceptorCall;Lorg/junit/jupiter/api/extension/InvocationInterceptor;Lorg/junit/jupiter/api/extension/InvocationInterceptor$Invocation;Lorg/junit/jupiter/api/extension/ReflectiveInvocationContext;Lorg/junit/jupiter/api/extension/ExtensionContext;)Ljava/lang/Void;+6
+j  org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall$$Lambda$110.apply(Lorg/junit/jupiter/api/extension/InvocationInterceptor;Lorg/junit/jupiter/api/extension/InvocationInterceptor$Invocation;Lorg/junit/jupiter/api/extension/ReflectiveInvocationContext;Lorg/junit/jupiter/api/extension/ExtensionContext;)Ljava/lang/Object;+9
+j  org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(Lorg/junit/jupiter/engine/execution/ExecutableInvoker$ReflectiveInterceptorCall;Lorg/junit/jupiter/api/extension/ReflectiveInvocationContext;Lorg/junit/jupiter/api/extension/ExtensionContext;Lorg/junit/jupiter/api/extension/InvocationInterceptor;Lorg/junit/jupiter/api/extension/InvocationInterceptor$Invocation;)Ljava/lang/Object;+6
+j  org.junit.jupiter.engine.execution.ExecutableInvoker$$Lambda$247.apply(Lorg/junit/jupiter/api/extension/InvocationInterceptor;Lorg/junit/jupiter/api/extension/InvocationInterceptor$Invocation;)Ljava/lang/Object;+14
+j  org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed()Ljava/lang/Object;+12
+j  org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(Lorg/junit/jupiter/api/extension/InvocationInterceptor$Invocation;)Ljava/lang/Object;+1
+j  org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(Lorg/junit/jupiter/api/extension/InvocationInterceptor$Invocation;Lorg/junit/jupiter/engine/execution/InvocationInterceptorChain$InterceptorCall;Ljava/util/List;)Ljava/lang/Object;+24
+j  org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(Lorg/junit/jupiter/api/extension/InvocationInterceptor$Invocation;Lorg/junit/jupiter/engine/extension/ExtensionRegistry;Lorg/junit/jupiter/engine/execution/InvocationInterceptorChain$InterceptorCall;)Ljava/lang/Object;+31
+j  org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(Lorg/junit/jupiter/api/extension/InvocationInterceptor$Invocation;Lorg/junit/jupiter/api/extension/ReflectiveInvocationContext;Lorg/junit/jupiter/api/extension/ExtensionContext;Lorg/junit/jupiter/engine/extension/ExtensionRegistry;Lorg/junit/jupiter/engine/execution/ExecutableInvoker$ReflectiveInterceptorCall;)Ljava/lang/Object;+15
+j  org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(Ljava/lang/reflect/Method;Ljava/lang/Object;Lorg/junit/jupiter/api/extension/ExtensionContext;Lorg/junit/jupiter/engine/extension/ExtensionRegistry;Lorg/junit/jupiter/engine/execution/ExecutableInvoker$ReflectiveInterceptorCall;)Ljava/lang/Object;+56
+j  org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(Lorg/junit/jupiter/api/extension/ExtensionContext;Lorg/junit/jupiter/engine/execution/JupiterEngineExecutionContext;)V+28
+j  org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor$$Lambda$265.execute()V+12
+j  org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(Lorg/junit/platform/engine/support/hierarchical/ThrowableCollector$Executable;)V+1
+j  org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(Lorg/junit/jupiter/engine/execution/JupiterEngineExecutionContext;Lorg/junit/platform/engine/support/hierarchical/Node$DynamicTestExecutor;)V+21
+j  org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(Lorg/junit/jupiter/engine/execution/JupiterEngineExecutionContext;Lorg/junit/platform/engine/support/hierarchical/Node$DynamicTestExecutor;)Lorg/junit/jupiter/engine/execution/JupiterEngineExecutionContext;+44
+j  org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(Lorg/junit/platform/engine/support/hierarchical/EngineExecutionContext;Lorg/junit/platform/engine/support/hierarchical/Node$DynamicTestExecutor;)Lorg/junit/platform/engine/support/hierarchical/EngineExecutionContext;+6
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5()V+79
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$200.execute()V+4
+j  org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(Lorg/junit/platform/engine/support/hierarchical/ThrowableCollector$Executable;)V+1
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(Lorg/junit/platform/engine/support/hierarchical/EngineExecutionContext;)V+15
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$199.invoke(Lorg/junit/platform/engine/support/hierarchical/EngineExecutionContext;)V+5
+j  org.junit.platform.engine.support.hierarchical.Node.around(Lorg/junit/platform/engine/support/hierarchical/EngineExecutionContext;Lorg/junit/platform/engine/support/hierarchical/Node$Invocation;)V+2
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8()V+14
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$198.execute()V+4
+j  org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(Lorg/junit/platform/engine/support/hierarchical/ThrowableCollector$Executable;)V+1
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively()V+31
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.execute()V+55
+j  org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService$$Lambda$204.accept(Ljava/lang/Object;)V+4
+j  java.util.ArrayList.forEach(Ljava/util/function/Consumer;)V+47
+j  org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(Ljava/util/List;)V+6
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5()V+116
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$200.execute()V+4
+j  org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(Lorg/junit/platform/engine/support/hierarchical/ThrowableCollector$Executable;)V+1
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(Lorg/junit/platform/engine/support/hierarchical/EngineExecutionContext;)V+15
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$199.invoke(Lorg/junit/platform/engine/support/hierarchical/EngineExecutionContext;)V+5
+j  org.junit.platform.engine.support.hierarchical.Node.around(Lorg/junit/platform/engine/support/hierarchical/EngineExecutionContext;Lorg/junit/platform/engine/support/hierarchical/Node$Invocation;)V+2
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8()V+14
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$198.execute()V+4
+j  org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(Lorg/junit/platform/engine/support/hierarchical/ThrowableCollector$Executable;)V+1
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively()V+31
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.execute()V+55
+j  org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService$$Lambda$204.accept(Ljava/lang/Object;)V+4
+j  java.util.ArrayList.forEach(Ljava/util/function/Consumer;)V+47
+j  org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(Ljava/util/List;)V+6
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5()V+116
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$200.execute()V+4
+j  org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(Lorg/junit/platform/engine/support/hierarchical/ThrowableCollector$Executable;)V+1
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(Lorg/junit/platform/engine/support/hierarchical/EngineExecutionContext;)V+15
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$199.invoke(Lorg/junit/platform/engine/support/hierarchical/EngineExecutionContext;)V+5
+j  org.junit.platform.engine.support.hierarchical.Node.around(Lorg/junit/platform/engine/support/hierarchical/EngineExecutionContext;Lorg/junit/platform/engine/support/hierarchical/Node$Invocation;)V+2
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8()V+14
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$198.execute()V+4
+j  org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(Lorg/junit/platform/engine/support/hierarchical/ThrowableCollector$Executable;)V+1
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively()V+31
+j  org.junit.platform.engine.support.hierarchical.NodeTestTask.execute()V+55
+j  org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(Lorg/junit/platform/engine/support/hierarchical/HierarchicalTestExecutorService$TestTask;)Ljava/util/concurrent/Future;+1
+j  org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute()Ljava/util/concurrent/Future;+74
+j  org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(Lorg/junit/platform/engine/ExecutionRequest;)V+31
+j  org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(Lorg/junit/platform/engine/TestDescriptor;Lorg/junit/platform/engine/EngineExecutionListener;Lorg/junit/platform/engine/ConfigurationParameters;Lorg/junit/platform/engine/TestEngine;)V+24
+j  org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(Lorg/junit/platform/launcher/core/LauncherDiscoveryResult;Lorg/junit/platform/engine/EngineExecutionListener;)V+86
+j  org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(Lorg/junit/platform/launcher/core/InternalTestPlan;Lorg/junit/platform/launcher/core/LauncherDiscoveryResult;Lorg/junit/platform/launcher/TestExecutionListener;)V+18
+j  org.junit.platform.launcher.core.EngineExecutionOrchestrator$$Lambda$162.accept(Ljava/lang/Object;)V+16
+j  org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(Lorg/junit/platform/engine/ConfigurationParameters;Lorg/junit/platform/launcher/core/TestExecutionListenerRegistry;Ljava/util/function/Consumer;)V+43
+j  org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(Lorg/junit/platform/launcher/core/InternalTestPlan;[Lorg/junit/platform/launcher/TestExecutionListener;)V+35
+j  org.junit.platform.launcher.core.DefaultLauncher.execute(Lorg/junit/platform/launcher/core/InternalTestPlan;[Lorg/junit/platform/launcher/TestExecutionListener;)V+6
+j  org.junit.platform.launcher.core.DefaultLauncher.execute(Lorg/junit/platform/launcher/TestPlan;[Lorg/junit/platform/launcher/TestExecutionListener;)V+36
+j  org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(Lorg/eclipse/jdt/internal/junit/runner/TestExecution;)V+69
+j  org.eclipse.jdt.internal.junit.runner.TestExecution.run([Lorg/eclipse/jdt/internal/junit/runner/ITestReference;)V+27
+j  org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests([Ljava/lang/String;Ljava/lang/String;Lorg/eclipse/jdt/internal/junit/runner/TestExecution;)V+62
+j  org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(Lorg/eclipse/jdt/internal/junit/runner/TestExecution;)V+10
+j  org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run()V+70
+j  org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main([Ljava/lang/String;)V+14
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000001ada7161800 JavaThread "ReaderThread" [_thread_in_native, id=18084, stack(0x0000000629d00000,0x0000000629e00000)]
+  0x000001ada6a3d000 JavaThread "Service Thread" daemon [_thread_blocked, id=8860, stack(0x0000000629b00000,0x0000000629c00000)]
+  0x000001ada6a34000 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=16096, stack(0x0000000629a00000,0x0000000629b00000)]
+  0x000001ada6a2f800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=18336, stack(0x0000000629900000,0x0000000629a00000)]
+  0x000001ada6a2e800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=8484, stack(0x0000000629800000,0x0000000629900000)]
+  0x000001ada6a28800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=22776, stack(0x0000000629700000,0x0000000629800000)]
+  0x000001ada46f6000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=6432, stack(0x0000000629600000,0x0000000629700000)]
+  0x000001ada46f5000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=2640, stack(0x0000000629500000,0x0000000629600000)]
+  0x000001ada46ed800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=3504, stack(0x0000000629400000,0x0000000629500000)]
+  0x000001ada46c6800 JavaThread "Attach Listener" daemon [_thread_blocked, id=8156, stack(0x0000000629300000,0x0000000629400000)]
+  0x000001ada46c5800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2932, stack(0x0000000629200000,0x0000000629300000)]
+  0x000001ada469e800 JavaThread "Finalizer" daemon [_thread_blocked, id=3872, stack(0x0000000629100000,0x0000000629200000)]
+  0x000001ada468f800 JavaThread "Reference Handler" daemon [_thread_blocked, id=4928, stack(0x0000000629000000,0x0000000629100000)]
+  0x000001ad89b0b000 JavaThread "main" [_thread_blocked, id=7116, stack(0x0000000628600000,0x0000000628700000)]
+
+Other Threads:
+  0x000001ada4665000 VMThread [stack: 0x0000000628f00000,0x0000000629000000] [id=19624]
+  0x000001ada6b39800 WatcherThread [stack: 0x0000000629c00000,0x0000000629d00000] [id=10632]
+
+=>0x000001ad89b25800 (exited) GCTaskThread [stack: 0x0000000628800000,0x0000000628900000] [id=3804]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001ad89b08e80] Threads_lock - owner thread: 0x000001ada4665000
+[0x000001ad89b0a400] Heap_lock - owner thread: 0x000001ada46ed800
+
+heap address: 0x00000006c3200000, size: 4046 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 75776K, used 71670K [0x000000076bb80000, 0x0000000771000000, 0x00000007c0000000)
+  eden space 65024K, 100% used [0x000000076bb80000,0x000000076fb00000,0x000000076fb00000)
+  from space 10752K, 61% used [0x000000076fb00000,0x000000077017d930,0x0000000770580000)
+  to   space 10752K, 39% used [0x0000000770580000,0x000000077099c010,0x0000000771000000)
+ ParOldGen       total 173568K, used 32K [0x00000006c3200000, 0x00000006cdb80000, 0x000000076bb80000)
+  object space 173568K, 0% used [0x00000006c3200000,0x00000006c3208000,0x00000006cdb80000)
+ Metaspace       used 16205K, capacity 17200K, committed 17280K, reserved 1064960K
+  class space    used 2221K, capacity 2425K, committed 2432K, reserved 1048576K
+
+Card table byte_map: [0x000001ad9a850000,0x000001ad9b040000] byte_map_base: 0x000001ad97237000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006f437fe0
+ Begin Bits: [0x000001ad9b590000, 0x000001ad9f4c8000)
+ End Bits:   [0x000001ad9f4c8000, 0x000001ada3400000)
+
+Polling page: 0x000001ad89e40000
+
+CodeCache: size=245760Kb used=7186Kb max_used=7303Kb free=238573Kb
+ bounds [0x000001ad8b490000, 0x000001ad8bbe0000, 0x000001ad9a490000]
+ total_blobs=2204 nmethods=1815 adapters=308
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 54050.069 Thread 0x000001ada6a34000 nmethod 1842 0x000001ad8bb44950 code [0x000001ad8bb44ae0, 0x000001ad8bb44f58]
+Event: 54050.069 Thread 0x000001ada6a34000 1843       3       net.bytebuddy.description.method.ParameterList$ForLoadedExecutable$OfMethod::<init> (6 bytes)
+Event: 54050.069 Thread 0x000001ada6a34000 nmethod 1843 0x000001ad8bb441d0 code [0x000001ad8bb44360, 0x000001ad8bb44718]
+Event: 54050.086 Thread 0x000001ada6a2f800 nmethod 1862 0x000001ad8bb3f710 code [0x000001ad8bb3f860, 0x000001ad8bb3fb28]
+Event: 54050.086 Thread 0x000001ada6a2e800 nmethod 1845 0x000001ad8bb42910 code [0x000001ad8bb42aa0, 0x000001ad8bb437f8]
+Event: 54050.498 Thread 0x000001ada6a28800 nmethod 1867 0x000001ad8bbc1950 code [0x000001ad8bbc23a0, 0x000001ad8bbcfd28]
+Event: 55048.767 Thread 0x000001ada6a34000 1868       3       net.bytebuddy.description.annotation.AnnotationList$AbstractBase::<init> (5 bytes)
+Event: 55048.768 Thread 0x000001ada6a34000 nmethod 1868 0x000001ad8b5a2e50 code [0x000001ad8b5a2fc0, 0x000001ad8b5a3298]
+Event: 55048.768 Thread 0x000001ada6a34000 1869       3       java.lang.reflect.Executable::getDeclaredAnnotations (8 bytes)
+Event: 55048.769 Thread 0x000001ada6a34000 nmethod 1869 0x000001ad8b5b7190 code [0x000001ad8b5b7320, 0x000001ad8b5b77b0]
+
+GC Heap History (3 events):
+Event: 0.900 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 75776K, used 65024K [0x000000076bb80000, 0x0000000771000000, 0x00000007c0000000)
+  eden space 65024K, 100% used [0x000000076bb80000,0x000000076fb00000,0x000000076fb00000)
+  from space 10752K, 0% used [0x0000000770580000,0x0000000770580000,0x0000000771000000)
+  to   space 10752K, 0% used [0x000000076fb00000,0x000000076fb00000,0x0000000770580000)
+ ParOldGen       total 173568K, used 0K [0x00000006c3200000, 0x00000006cdb80000, 0x000000076bb80000)
+  object space 173568K, 0% used [0x00000006c3200000,0x00000006c3200000,0x00000006cdb80000)
+ Metaspace       used 12306K, capacity 13224K, committed 13312K, reserved 1060864K
+  class space    used 1514K, capacity 1709K, committed 1792K, reserved 1048576K
+Event: 0.905 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 75776K, used 6646K [0x000000076bb80000, 0x0000000771000000, 0x00000007c0000000)
+  eden space 65024K, 0% used [0x000000076bb80000,0x000000076bb80000,0x000000076fb00000)
+  from space 10752K, 61% used [0x000000076fb00000,0x000000077017d930,0x0000000770580000)
+  to   space 10752K, 0% used [0x0000000770580000,0x0000000770580000,0x0000000771000000)
+ ParOldGen       total 173568K, used 24K [0x00000006c3200000, 0x00000006cdb80000, 0x000000076bb80000)
+  object space 173568K, 0% used [0x00000006c3200000,0x00000006c3206000,0x00000006cdb80000)
+ Metaspace       used 12306K, capacity 13224K, committed 13312K, reserved 1060864K
+  class space    used 1514K, capacity 1709K, committed 1792K, reserved 1048576K
+}
+Event: 55048.769 GC heap before
+{Heap before GC invocations=2 (full 0):
+ PSYoungGen      total 75776K, used 71670K [0x000000076bb80000, 0x0000000771000000, 0x00000007c0000000)
+  eden space 65024K, 100% used [0x000000076bb80000,0x000000076fb00000,0x000000076fb00000)
+  from space 10752K, 61% used [0x000000076fb00000,0x000000077017d930,0x0000000770580000)
+  to   space 10752K, 0% used [0x0000000770580000,0x0000000770580000,0x0000000771000000)
+ ParOldGen       total 173568K, used 24K [0x00000006c3200000, 0x00000006cdb80000, 0x000000076bb80000)
+  object space 173568K, 0% used [0x00000006c3200000,0x00000006c3206000,0x00000006cdb80000)
+ Metaspace       used 16205K, capacity 17200K, committed 17280K, reserved 1064960K
+  class space    used 2221K, capacity 2425K, committed 2432K, reserved 1048576K
+
+Deoptimization events (10 events):
+Event: 1.274 Thread 0x000001ad89b0b000 Uncommon trap: reason=range_check action=none pc=0x000001ad8ba4df24 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+Event: 1.276 Thread 0x000001ad89b0b000 Uncommon trap: reason=range_check action=none pc=0x000001ad8ba4df24 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+Event: 1.283 Thread 0x000001ad89b0b000 Uncommon trap: reason=range_check action=none pc=0x000001ad8ba4df24 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+Event: 1.289 Thread 0x000001ad89b0b000 Uncommon trap: reason=range_check action=none pc=0x000001ad8ba4df24 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+Event: 1.311 Thread 0x000001ad89b0b000 Uncommon trap: reason=range_check action=none pc=0x000001ad8ba4df24 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+Event: 54050.047 Thread 0x000001ada46ed800 Uncommon trap: reason=range_check action=none pc=0x000001ad8ba4df24 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+Event: 54050.052 Thread 0x000001ada46ed800 Uncommon trap: reason=range_check action=none pc=0x000001ad8ba4df24 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+Event: 54050.057 Thread 0x000001ada46ed800 Uncommon trap: reason=range_check action=none pc=0x000001ad8ba4df24 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+Event: 54050.063 Thread 0x000001ada46ed800 Uncommon trap: reason=range_check action=none pc=0x000001ad8ba4df24 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+Event: 55048.766 Thread 0x000001ada46ed800 Uncommon trap: reason=range_check action=none pc=0x000001ad8ba4df24 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+
+Classes redefined (10 events):
+Event: 1659.438 Thread 0x000001ada4665000 redefined class name=ua.com.foxminded.task6.RaceResultServiceTest, count=7
+Event: 54050.074 Thread 0x000001ada4665000 redefined class name=ua.com.foxminded.task6.dao.RacerDAO, count=3
+Event: 54050.077 Thread 0x000001ada4665000 redefined class name=ua.com.foxminded.task6.Racer, count=2
+Event: 54050.080 Thread 0x000001ada4665000 redefined class name=ua.com.foxminded.task6.ResultRacer, count=2
+Event: 54050.083 Thread 0x000001ada4665000 redefined class name=ua.com.foxminded.task6.RaceResultServiceTest, count=8
+Event: 54050.086 Thread 0x000001ada4665000 redefined class name=ua.com.foxminded.task6.services.RaceResultService, count=2
+Event: 54071.683 Thread 0x000001ada4665000 redefined class name=ua.com.foxminded.task6.RaceResultServiceTest, count=9
+Event: 54149.518 Thread 0x000001ada4665000 redefined class name=ua.com.foxminded.task6.RaceResultServiceTest, count=10
+Event: 54728.055 Thread 0x000001ada4665000 redefined class name=ua.com.foxminded.task6.RaceResultServiceTest, count=11
+Event: 54732.633 Thread 0x000001ada4665000 redefined class name=ua.com.foxminded.task6.RaceResultServiceTest, count=12
+
+Internal exceptions (10 events):
+Event: 1.274 Thread 0x000001ad89b0b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 67> (0x000000076f3f8f50) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u301\1513\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 371]
+Event: 1.276 Thread 0x000001ad89b0b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 117> (0x000000076f424c28) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u301\1513\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 371]
+Event: 1.284 Thread 0x000001ad89b0b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 22> (0x000000076f4f5d98) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u301\1513\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 371]
+Event: 1.289 Thread 0x000001ad89b0b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 55> (0x000000076f57a660) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u301\1513\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 371]
+Event: 1.311 Thread 0x000001ad89b0b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 22> (0x000000076f6b7fe8) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u301\1513\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 371]
+Event: 54050.047 Thread 0x000001ada46ed800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 50> (0x000000076f9b0f98) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u301\1513\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 371]
+Event: 54050.052 Thread 0x000001ada46ed800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 117> (0x000000076f9d80e8) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u301\1513\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 371]
+Event: 54050.057 Thread 0x000001ada46ed800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 22> (0x000000076fa17b58) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u301\1513\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 371]
+Event: 54050.063 Thread 0x000001ada46ed800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 55> (0x000000076fa637a0) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u301\1513\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 371]
+Event: 55048.767 Thread 0x000001ada46ed800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 50> (0x000000076faf7948) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u301\1513\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 371]
+
+Events (10 events):
+Event: 54733.525 Executing VM operation: GetOwnedMonitorInfo
+Event: 54733.525 Executing VM operation: GetOwnedMonitorInfo done
+Event: 54733.525 Executing VM operation: GetCurrentContendedMonitor
+Event: 54733.525 Executing VM operation: GetCurrentContendedMonitor done
+Event: 55048.766 Thread 0x000001ada46ed800 Uncommon trap: trap_request=0xffffffe7 fr.pc=0x000001ad8ba4df24
+Event: 55048.766 Thread 0x000001ada46ed800 DEOPT PACKING pc=0x000001ad8ba4df24 sp=0x00000006294fd970
+Event: 55048.767 Thread 0x000001ada46ed800 DEOPT UNPACKING pc=0x000001ad8b4d5843 sp=0x00000006294fd908 mode 2
+Event: 55048.768 Thread 0x000001ada6a34000 flushing nmethod 0x000001ad8b688cd0
+Event: 55048.769 Thread 0x000001ada6a34000 flushing nmethod 0x000001ad8b6f0610
+Event: 55048.769 Executing VM operation: ParallelGCFailedAllocation
+
+
+Dynamic libraries:
+0x00007ff6fe8f0000 - 0x00007ff6fe937000 	C:\Java\JDK_1.8\bin\javaw.exe
+0x00007ffeb2c90000 - 0x00007ffeb2e85000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffeb22f0000 - 0x00007ffeb23ae000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffeb0840000 - 0x00007ffeb0b08000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffeb21d0000 - 0x00007ffeb227c000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffeb19a0000 - 0x00007ffeb1a3e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffeb16c0000 - 0x00007ffeb175b000 	C:\Windows\System32\sechost.dll
+0x00007ffeb20a0000 - 0x00007ffeb21ca000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffeb17f0000 - 0x00007ffeb1991000 	C:\Windows\System32\USER32.dll
+0x00007ffeb0620000 - 0x00007ffeb0642000 	C:\Windows\System32\win32u.dll
+0x00007ffeb15c0000 - 0x00007ffeb15eb000 	C:\Windows\System32\GDI32.dll
+0x00007ffeb0bc0000 - 0x00007ffeb0ccd000 	C:\Windows\System32\gdi32full.dll
+0x00007ffeb07a0000 - 0x00007ffeb083d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffeb06a0000 - 0x00007ffeb07a0000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffea6aa0000 - 0x00007ffea6d3a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffeb17c0000 - 0x00007ffeb17f0000 	C:\Windows\System32\IMM32.DLL
+0x00007ffea4c00000 - 0x00007ffea4c15000 	C:\Java\JDK_1.8\jre\bin\vcruntime140.dll
+0x00007ffe75f10000 - 0x00007ffe75fab000 	C:\Java\JDK_1.8\jre\bin\msvcp140.dll
+0x000000006ec50000 - 0x000000006f4b0000 	C:\Java\JDK_1.8\jre\bin\server\jvm.dll
+0x00007ffeb10c0000 - 0x00007ffeb10c8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffea8a60000 - 0x00007ffea8a6a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffe8c9f0000 - 0x00007ffe8ca17000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffe97040000 - 0x00007ffe97049000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffeb2280000 - 0x00007ffeb22eb000 	C:\Windows\System32\WS2_32.dll
+0x00007ffeaec50000 - 0x00007ffeaec62000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffea4bf0000 - 0x00007ffea4c00000 	C:\Java\JDK_1.8\jre\bin\verify.dll
+0x00007ffe91aa0000 - 0x00007ffe91acb000 	C:\Java\JDK_1.8\jre\bin\java.dll
+0x00007ffe90b70000 - 0x00007ffe90ba6000 	C:\Java\JDK_1.8\jre\bin\jdwp.dll
+0x00007ffea4be0000 - 0x00007ffea4be9000 	C:\Java\JDK_1.8\jre\bin\npt.dll
+0x00007ffe909f0000 - 0x00007ffe90a20000 	C:\Java\JDK_1.8\jre\bin\instrument.dll
+0x00007ffe95e90000 - 0x00007ffe95ea8000 	C:\Java\JDK_1.8\jre\bin\zip.dll
+0x00007ffeb23b0000 - 0x00007ffeb2af4000 	C:\Windows\System32\SHELL32.dll
+0x00007ffeae470000 - 0x00007ffeaec04000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x00007ffeb10d0000 - 0x00007ffeb1425000 	C:\Windows\System32\combase.dll
+0x00007ffeafdf0000 - 0x00007ffeafe1e000 	C:\Windows\SYSTEM32\Wldp.dll
+0x00007ffeb0cd0000 - 0x00007ffeb0d7d000 	C:\Windows\System32\SHCORE.dll
+0x00007ffeb1760000 - 0x00007ffeb17b5000 	C:\Windows\System32\shlwapi.dll
+0x00007ffeb02e0000 - 0x00007ffeb02ff000 	C:\Windows\SYSTEM32\profapi.dll
+0x00007ffea4740000 - 0x00007ffea474a000 	C:\Java\JDK_1.8\jre\bin\dt_socket.dll
+0x00007ffe6cb90000 - 0x00007ffe6cba7000 	C:\Windows\system32\napinsp.dll
+0x00007ffe6cb70000 - 0x00007ffe6cb8b000 	C:\Windows\system32\pnrpnsp.dll
+0x00007ffeaaeb0000 - 0x00007ffeaaec5000 	C:\Windows\system32\wshbth.dll
+0x00007ffeab820000 - 0x00007ffeab83d000 	C:\Windows\system32\NLAapi.dll
+0x00007ffeaf7f0000 - 0x00007ffeaf82b000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x00007ffeafb50000 - 0x00007ffeafbba000 	C:\Windows\System32\mswsock.dll
+0x00007ffeaf830000 - 0x00007ffeaf8fb000 	C:\Windows\SYSTEM32\DNSAPI.dll
+0x00007ffeb0de0000 - 0x00007ffeb0de8000 	C:\Windows\System32\NSI.dll
+0x00007ffe6cb50000 - 0x00007ffe6cb62000 	C:\Windows\System32\winrnr.dll
+0x00007ffea63d0000 - 0x00007ffea644f000 	C:\Windows\System32\fwpuclnt.dll
+0x00007ffeb03a0000 - 0x00007ffeb03c7000 	C:\Windows\System32\bcrypt.dll
+0x00007ffea8980000 - 0x00007ffea898a000 	C:\Windows\System32\rasadhlp.dll
+0x00007ffe91f60000 - 0x00007ffe91f7c000 	C:\Java\JDK_1.8\jre\bin\net.dll
+0x00007ffea3f10000 - 0x00007ffea3f1d000 	C:\Java\JDK_1.8\jre\bin\management.dll
+0x00007ffeafd50000 - 0x00007ffeafd68000 	C:\Windows\SYSTEM32\CRYPTSP.dll
+0x00007ffeaf460000 - 0x00007ffeaf494000 	C:\Windows\system32\rsaenh.dll
+0x00007ffeb0260000 - 0x00007ffeb028e000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007ffeb0530000 - 0x00007ffeb05b2000 	C:\Windows\System32\bcryptprimitives.dll
+0x00007ffeafd40000 - 0x00007ffeafd4c000 	C:\Windows\SYSTEM32\CRYPTBASE.dll
+0x00007ffea6a80000 - 0x00007ffea6a97000 	C:\Windows\SYSTEM32\dhcpcsvc6.DLL
+0x00007ffea9770000 - 0x00007ffea978d000 	C:\Windows\SYSTEM32\dhcpcsvc.DLL
+0x00007ffe91dd0000 - 0x00007ffe91de3000 	C:\Java\JDK_1.8\jre\bin\nio.dll
+0x00007ffea3590000 - 0x00007ffea3599000 	C:\Java\JDK_1.8\jre\bin\attach.dll
+0x00007ffeadd50000 - 0x00007ffeadf34000 	C:\Windows\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:51288 -ea -javaagent:C:\Java\Eclipse\eclipse\configuration\org.eclipse.osgi\415\0\.cp\lib\javaagent-shaded.jar -Dfile.encoding=Cp1251 
+java_command: org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 51287 -testLoaderClass org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader -loaderpluginname org.eclipse.jdt.junit5.runtime -classNames ua.com.foxminded.task6.RaceResultServiceTest
+java_class_path (initial): C:\repository\Spring\target\test-classes;C:\repository\Spring\target\classes;C:\Users\79885\.p2\pool\plugins\org.junit.jupiter.api_5.7.1.v20210222-1948.jar;C:\Users\79885\.p2\pool\plugins\org.junit.jupiter.engine_5.7.1.v20210222-1948.jar;C:\Users\79885\.p2\pool\plugins\org.junit.jupiter.migrationsupport_5.7.1.v20210222-1948.jar;C:\Users\79885\.p2\pool\plugins\org.junit.jupiter.params_5.7.1.v20210222-1948.jar;C:\Users\79885\.p2\pool\plugins\org.junit.platform.commons_1.7.1.v20210222-1948.jar;C:\Users\79885\.p2\pool\plugins\org.junit.platform.engine_1.7.1.v20210222-1948.jar;C:\Users\79885\.p2\pool\plugins\org.junit.platform.launcher_1.7.1.v20210222-1948.jar;C:\Users\79885\.p2\pool\plugins\org.junit.platform.runner_1.7.1.v20210222-1948.jar;C:\Users\79885\.p2\pool\plugins\org.junit.platform.suite.api_1.7.1.v20210222-1948.jar;C:\Users\79885\.p2\pool\plugins\org.junit.vintage.engine_5.7.1.v20210222-1948.jar;C:\Users\79885\.p2\pool\plugins\org.opentest4j_1.2.0.v20190826-0900.jar;C:\Users\79885\.p2\pool\plugins\org.apiguardian_1.1.0.v20190826-0900.jar;C:\Users\79885\.p2\pool\plugins\org.junit_4.13.0.v20200204-1500.jar;C:\Users\79885\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;C:\Users\79885\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.3.1\junit-jupiter-engine-5.3.1.jar;C:\Users\79885\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\79885\.m2\repository\org\junit\platform\junit-platform-engine\1.3.1\junit-platform-engine-1.3.1.jar;C:\Users\79885\.m2\repository\org\junit\platform\junit-platform-commons\1.3.1\junit-platform-commons-1.3.1.jar;C:\Users\79885\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\79885\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.3.1\junit-jupiter-api-5.3.1.jar;C:\Users\79885\.m2\repository\org\mockito\mockito-core\2.13.0\mockito-core-2.13.0.jar;C:\Users\79885\.m2\repository\net\bytebuddy\byte-buddy\1.7.9\byte-buddy-1.7.9.j
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=.;
+PATH=C:\Java\JDK_1.8\jre\bin;C:/Users/79885/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835/jre/bin/server;C:/Users/79885/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835/jre/bin;C:\Java\JDK_1.8\bin;C:\Java\maven\bin;C:\Users\79885\Desktop\®Ά ο ― ―ª \®Ά ο ― ―ª ;
+USERNAME=79885
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 19041 (10.0.19041.1348)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 140 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16571704k(3652228k free), swap 20505100k(2609064k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.301-b09) for windows-amd64 JRE (1.8.0_301-b09), built on Jun  9 2021 06:46:21 by "java_re" with MS VC++ 15.9 (VS2017)
+
+time: Thu Jan  6 09:55:17 2022
+timezone: RTZ 2 (ηθμΰ)
+elapsed time: 55048.831857 seconds (0d 15h 17m 28s)
+
